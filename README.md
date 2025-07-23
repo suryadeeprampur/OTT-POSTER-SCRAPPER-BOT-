@@ -1,7 +1,7 @@
 # 🎬 OTT PosterBot — Prime Video, ZEE5, AirtelXstream, YouTube & GDFlix Scraper 🤖
 
 A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, and seasons) from  
-**🎬 Prime Video**, **📺 ZEE5**, **📡 AirtelXstream**, **📹 YouTube**, and **📁 GDFlix/GDLink downloaders**, and auto-post them to your Telegram channel — with just a link or command.
+**🎬 Prime Video**, **📺 ZEE5**, **📡 AirtelXstream**, **📹 YouTube**, and **📁 GDFlix/HubCloud/GDLink downloaders**, and auto-post them to your Telegram channel — with just a link or command.
 
 > ⚡ Built with Pyrogram, MongoDB & BeautifulSoup  
 > 🚀 Maintained by [@PBX1_BOTS](https://t.me/PBX1_BOTS) × [HG BOTZ](https://t.me/HGBOTZ)
@@ -16,7 +16,10 @@ A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, 
   - 📡 **AirtelXstream**
   - 📹 **YouTube** *(auto-thumbnail fetch from videos)*
 - 📁 File Link Extraction from:
-  - 🌐 **GDFlix** / **GDLink** (full scraping with resume links, mirrors, gofile, pixeldrain, etc.)
+  - 🌐 **GDFlix / GDLink**
+  - 🗃️ **HubCloud** (bypass redirects like gamerxyt.com)
+  - 🔍 **SkyMoviesHD** (via movie name)
+  - 📰 **Cinevood-style HTML** (raw HTML link parsing)
 - 🎯 Season-specific poster support (`/poster s01 <link>`)
 - 🔗 Auto-post to Telegram channel via `/post <link>`
 - 🔍 Prime Video search via `/search <title>`
@@ -40,7 +43,9 @@ A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, 
 | `/poster s01 <link>`     | Fetch specific season poster                     |
 | `/post <link>`           | Auto-post any OTT or YouTube poster              |
 | `/search <title>`        | Prime Video title search                         |
-| `/scrape <gdflix_link>`  | Extract direct download links from GDFlix/GDLink |
+| `/scrape <link>`         | Extract direct download links from **GDFlix / GDLink / HubCloud** |
+| `/sky <title>`           | Search **SkyMoviesHD** by name and extract links |
+| `/cine <html_url>`       | Extract cloud links from raw **CineHub-style HTML** |
 | `/authorize <user_id>`   | ➕ (Admin) Authorize a user                       |
 | `/unauthorize <id>`      | ➖ (Admin) Revoke access                          |
 | `/authlist`              | List of authorized users                         |
@@ -48,23 +53,24 @@ A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, 
 
 ---
 
-## 🔎 GDFlix / GDLink Scraper (Advanced) 🎯
+## 🔎 GDFlix / GDLink / HubCloud Scraper (Advanced) 🎯
 
-Use the `/scrape <gdflix_link>` command to extract all **actual download links** from GDFlix-style pages like:
+Use the `/scrape <link>` command to extract all **actual download links** from:
 
 - `https://gdlink.dev/...`
 - `https://gdflix/...`
+- `https://hubcloud.one/...`
+- `https://gamerxyt.com/games/...`
 - `https://vifix.site/...`
-- `https://new10.gdflix.dad/...`
 
 ### ✅ What it extracts:
 
 - **Direct cloud buttons**: `INSTANT DL`, `CLOUD DOWNLOAD`, `DRIVEBOT`, `TELEGRAM FILE`, `LOGIN TO DL`
-- **Fast cloud redirect**: Follows `FAST CLOUD` → `XFile` → `CLOUD RESUME DOWNLOAD`
-- **Mirror pages**: Detects and extracts from mirror hosts like:
+- **Fast cloud redirects**: Follows `FAST CLOUD` → `XFile` → `CLOUD RESUME DOWNLOAD`
+- **Mirror hosts**:
   - 🗂 **GOFILE**
   - 🌀 **PIXELDRAIN**
-  - 💨 Others can be extended...
+  - ⚡ **R2.dev**, **hubcdn**, etc.
 
 ### 📦 Output Format:
 
@@ -80,7 +86,7 @@ Use the `/scrape <gdflix_link>` command to extract all **actual download links**
 🌀 PIXELDRAIN : Click Here  
 
 ━━━━━━━━━━━━━━━━━━  
-⚡ Powered By @PBX1_BOTS🚀
+⚡ Powered By @PBX1_BOTS 🚀
 ```
 
 ### 🔹 Heroku
