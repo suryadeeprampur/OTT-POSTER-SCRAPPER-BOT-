@@ -90,16 +90,15 @@ heroku buildpacks:add heroku/python
 heroku buildpacks:add https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
 ```
 ## 🔹 Railway
-
+```
 Go to railway.app
 
 Create new project → GitHub repo
 
 Add ENV variables and deploy
 ```
-```
 ## 🔹 Render
-
+```
 Visit render.com
 
 New Web Service → Connect GitHub
@@ -108,9 +107,8 @@ Set start command: python3 bot.py
 
 Add ENV vars and deploy
 ```
-```
 ## 🔹 Docker
-
+```
 git clone https://github.com/yourusername/ott-posterbot
 cd ott-posterbot
 docker build -t posterbot .
@@ -122,16 +120,14 @@ docker run -d \
   -e CHANNEL_ID=... \
   posterbot
   ```
-```
 ## 📚 Dependencies
-
+```
 pyrogram
 tgcrypto
 pymongo
 requests
 beautifulsoup4
 python-dotenv
-```
 ```
 
 ## 👨‍💻 Maintainer
