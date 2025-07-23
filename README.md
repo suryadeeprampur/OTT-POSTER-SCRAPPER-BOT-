@@ -1,7 +1,7 @@
-# 🎬 OTT PosterBot — Prime Video, ZEE5, AirtelXstream, YouTube & GDFlix Scraper 🤖
+# 🎬 OTT PosterBot — Prime Video, ZEE5, AppleTV, AirtelXstream, YouTube & GDFlix Scraper 🤖
 
 A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, and seasons) from  
-**🎬 Prime Video**, **📺 ZEE5**, **📡 AirtelXstream**, **📹 YouTube**, and **📁 GDFlix/HubCloud/GDLink downloaders**, and auto-post them to your Telegram channel — with just a link or command.
+**🎬 Prime Video**, **📺 ZEE5**, **📡 AirtelXstream**, **AppleTV+**, **📹 YouTube**, and **📁 GDFlix/HubCloud/GDLink downloaders**, and auto-post them to your Telegram channel — with just a link or command.
 
 > ⚡ Built with Pyrogram, MongoDB & BeautifulSoup  
 > 🚀 Maintained by [@PBX1_BOTS](https://t.me/PBX1_BOTS) × [HG BOTZ](https://t.me/HGBOTZ)
@@ -43,6 +43,7 @@ A powerful Telegram bot to **scrape high-quality OTT posters** (movies, series, 
 | `/poster s01 <link>`     | Fetch specific season poster                     |
 | `/post <link>`           | Auto-post any OTT or YouTube poster              |
 | `/search <title>`        | Prime Video title search                         |
+| `/appletv <link>`        | Get **AppleTv+** Poster
 | `/scrape <link>`         | Extract direct download links from **GDFlix / GDLink / HubCloud** |
 | `/sky <title>`           | Search **SkyMoviesHD** by name and extract links |
 | `/cine <html_url>`       | Extract cloud links from raw **CineHub-style HTML** |
