@@ -1,9 +1,17 @@
 import os
+import subprocess
 from pyrogram import Client, filters
 from dotenv import load_dotenv
 from tmdbv3api import TMDb, Movie, TV
 
-# Load environment variables
+# ------------------- Time sync ------------------- #
+# Sync container time with NTP server
+try:
+    subprocess.run(["ntpdate", "-u", "pool.ntp.org"], check=True)
+except Exception as e:
+    print(f"⚠️ Time sync failed: {e}")
+
+# ------------------- Env Variables ------------------- #
 load_dotenv()
 
 API_ID = int(os.getenv("API_ID", "24196359"))
@@ -11,7 +19,7 @@ API_HASH = os.getenv("API_HASH", "20a1b32381ed174799e8af8def3e176b")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 TMDB_API_KEY = os.getenv("TMDB_API_KEY", "744cb86428114a0aab28286b9687bbfe")
 
-# TMDB setup
+# ------------------- TMDB Setup ------------------- #
 tmdb = TMDb()
 tmdb.api_key = TMDB_API_KEY
 tmdb.language = "en"
@@ -19,7 +27,7 @@ tmdb.language = "en"
 movie_api = Movie()
 tv_api = TV()
 
-# Create Pyrogram Client
+# ------------------- Pyrogram Client ------------------- #
 app = Client(
     "OTT-Poster-Scrapper-Bot",
     api_id=API_ID,
@@ -28,7 +36,6 @@ app = Client(
 )
 
 # ------------------- Handlers ------------------- #
-
 @app.on_message(filters.command("start") & filters.private)
 async def start_handler(client, message):
     await message.reply_text(
