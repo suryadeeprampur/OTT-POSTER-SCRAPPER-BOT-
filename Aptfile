@@ -1,0 +1,25 @@
+# Aptfile
+
+# MongoDB tools (optional if you need mongodump/restore)
+mongodb-clients
+
+# For media handling (ffmpeg needed for posters/thumbs if resizing/encoding)
+ffmpeg
+
+# Curl + wget (general network tools, sometimes useful for scraping)
+curl
+wget
+
+# For HTML/XML parsing libraries (libxml2 + libxslt required by lxml/bs4)
+libxml2
+libxslt1.1
+
+# zlib (compression)
+zlib1g
+
+# SSL/TLS (secure connections)
+libssl-dev
+
+# Image libraries (for Pillow / thumbnails)
+libjpeg62-turbo
+zlib1g-dev
