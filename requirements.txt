@@ -4,5 +4,5 @@ Procfile
 Aptfile
 runtime.txt
 requirements.txt
-.env.example
 scrapers/hubcloud.py
+
