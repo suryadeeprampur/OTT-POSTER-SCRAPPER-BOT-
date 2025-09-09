@@ -19,12 +19,12 @@ RUN apt-get update -y && \
 # Copy project files
 COPY . /app
 
-# Install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+# Upgrade pip and install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
-# Expose port if needed (optional, for webhooks)
+# Expose port (optional, needed if bot has webhook)
 EXPOSE 5000
 
 # Command to run the bot
-CMD ["python3", "bot.py"]
+CMD ["python", "bot.py"]
