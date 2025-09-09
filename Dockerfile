@@ -18,7 +18,7 @@ RUN apt-get update -y && \
         zlib1g \
         libjpeg62-turbo \
         tzdata \
-        ntpdate \
+        ntpsec-ntpdate \
     && ln -fs /usr/share/zoneinfo/$TZ /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata \
     && rm -rf /var/lib/apt/lists/*
@@ -34,4 +34,4 @@ RUN pip install --no-cache-dir --upgrade pip && \
 EXPOSE 5000
 
 # ------------------- Command to Sync Time and Run Bot ------------------- #
-CMD ntpdate -u pool.ntp.org && python bot.py
+CMD ntpsec-ntpdate -u pool.ntp.org && python bot.py
