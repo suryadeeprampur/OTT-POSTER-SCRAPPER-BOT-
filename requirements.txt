@@ -10,7 +10,8 @@ beautifulsoup4==4.12.2
 lxml==4.9.3
 
 # Required for TMDB API
-tmdbv3api==1.8.0
+tmdbv3api==1.7.7
 
 # Speedup for Pyrogram
 tgcrypto==1.4.3
+
