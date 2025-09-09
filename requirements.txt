@@ -1,8 +1,12 @@
-bot.py
-app.py
-Procfile
-Aptfile
-runtime.txt
-requirements.txt
-scrapers/hubcloud.py
+# Core libraries
+pyrogram==2.0.44
+python-dotenv==1.0.0
+pymongo==4.3.3
+aiohttp==3.8.4
+requests==2.31.0
+
+# Optional libraries (add if used in scrapers or bot)
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
 
