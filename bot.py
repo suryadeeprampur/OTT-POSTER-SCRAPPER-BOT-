@@ -6,10 +6,10 @@ from tmdbv3api import TMDb, Movie, TV
 # Load environment variables
 load_dotenv()
 
-API_ID = int(os.getenv("API_ID", "0"))
-API_HASH = os.getenv("API_HASH", "")
+API_ID = int(os.getenv("API_ID", "24196359"))
+API_HASH = os.getenv("API_HASH", "20a1b32381ed174799e8af8def3e176b")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-TMDB_API_KEY = os.getenv("TMDB_API_KEY", "")
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "744cb86428114a0aab28286b9687bbfe")
 
 # TMDB setup
 tmdb = TMDb()
