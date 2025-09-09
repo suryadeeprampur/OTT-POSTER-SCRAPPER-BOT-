@@ -5,8 +5,12 @@ pymongo==4.3.3
 aiohttp==3.8.4
 requests==2.31.0
 
-# Optional libraries (add if used in scrapers or bot)
+# Optional libraries (used in scrapers or bot)
 beautifulsoup4==4.12.2
 lxml==4.9.3
 
+# Required for TMDB API
+tmdbv3api==1.8.0
 
+# Speedup for Pyrogram
+tgcrypto==1.4.3
