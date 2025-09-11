@@ -5,9 +5,9 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 # ===== CONFIG =====
-API_ID = 
-API_HASH = "  "
-BOT_TOKEN = "  "
+API_ID = "24196359"
+API_HASH = "20a1b32381ed174799e8af8def3e176b"
+BOT_TOKEN = " "
 
 
 # ===== BOT INSTANCE =====
